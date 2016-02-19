@@ -17,13 +17,14 @@
 @property (assign, nonatomic) CGFloat temperature;
 @property (weak, nonatomic) id <VLPatientDelegate> delegate;
 
-- (BOOL) gotWorse;
-- (BOOL) hasHeadAche;
-- (BOOL) hasStomachAche;
-- (void) takesPill;
-- (void) makesShot;
-- (void) goesToHospital;
-- (void) goesToSurgery;
+- (BOOL)gotWorse;
+- (BOOL)hasHeadAche;
+- (BOOL)hasStomachAche;
+- (void)takesPill;
+- (void)makesShot;
+- (void)goesToHospital;
+- (void)goesToSurgery;
+- (id)initWithName:(NSString *)name :(CGFloat)temperature :(id)delegate;
 
 
 @end
@@ -32,6 +33,6 @@
 
 @required
 
-- (void) patientFeelsBad: (VLPatient *) patient;
+- (void)patientFeelsBad:(VLPatient *)patient;
 
 @end

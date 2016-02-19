@@ -14,7 +14,7 @@
 #pragma mark - VLPatientDelegate
 
 
-- (void) patientFeelsBad: (VLPatient *) patient {
+- (void)patientFeelsBad:(VLPatient *)patient {
     
     int i = 0;
 
@@ -22,7 +22,6 @@
         
         NSLog(@"Patient %@ has a headache", patient.name);
         i++;
-
         
         if (patient.temperature < 37.f) {
             NSLog(@"Patient %@ should rest", patient.name);

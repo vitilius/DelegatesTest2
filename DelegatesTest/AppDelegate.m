@@ -21,41 +21,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    VLPatient* patient1 = [[VLPatient alloc] init];
-    patient1.name = @"Vasya";
-    patient1.temperature = 36.9f;
-    
-    VLPatient* patient2 = [[VLPatient alloc] init];
-    patient2.name = @"Oleg";
-    patient2.temperature = 37.2f;
-    
-    VLPatient* patient3 = [[VLPatient alloc] init];
-    patient3.name = @"Pasha";
-    patient3.temperature = 38.1f;
-    
-    VLPatient* patient4 = [[VLPatient alloc] init];
-    patient4.name = @"Igor";
-    patient4.temperature = 38.9f;
-    
-    VLPatient* patient5 = [[VLPatient alloc] init];
-    patient5.name = @"Dima";
-    patient5.temperature = 39.4f;
-    
-    VLPatient* patient6 = [[VLPatient alloc] init];
-    patient6.name = @"Kolya";
-    patient6.temperature = 40.5f;
-    
     VLDoctor* doctor = [[VLDoctor alloc] init];
-    
     VLFriend* friend1 = [[VLFriend alloc] init];
     VLFriend* friend2 = [[VLFriend alloc] init];
     
-    patient1.delegate = doctor;
-    patient2.delegate = doctor;
-    patient3.delegate = friend1;
-    patient4.delegate = doctor;
-    patient5.delegate = friend2;
-    patient6.delegate = doctor;
+    VLPatient* patient1 = [[VLPatient alloc] initWithName:@"Vasya" :36.9f :doctor];
+    VLPatient* patient2 = [[VLPatient alloc] initWithName:@"Oleg" :37.2f :doctor];
+    VLPatient* patient3 = [[VLPatient alloc] initWithName:@"Pasha" :38.1f :friend1];
+    VLPatient* patient4 = [[VLPatient alloc] initWithName:@"Igor" :38.9f :doctor];
+    VLPatient* patient5 = [[VLPatient alloc] initWithName:@"Dima" :39.4f :friend2];
+    VLPatient* patient6 = [[VLPatient alloc] initWithName:@"Kolya" :40.5f :doctor];
+
+
     
     NSArray* patients = @[patient1, patient2, patient3, patient4, patient5, patient6];
     

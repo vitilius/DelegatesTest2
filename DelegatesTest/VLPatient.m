@@ -10,7 +10,17 @@
 
 @implementation VLPatient
 
-- (BOOL) gotWorse {
+- (id)initWithName:(NSString *)name :(CGFloat)temperature :(id)delegate {
+   
+    self = [super init];
+    self.name = name;
+    self.temperature = temperature;
+    self.delegate = delegate;
+    
+    return self;
+}
+
+- (BOOL)gotWorse {
     
     BOOL gotWorse = arc4random()%2;
     
@@ -21,31 +31,31 @@
     return gotWorse;
 }
 
-- (BOOL) hasHeadAche {
+- (BOOL)hasHeadAche {
     
     return arc4random()%2;
 }
 
-- (BOOL) hasStomachAche {
+- (BOOL)hasStomachAche {
     
     return arc4random()%2;
 }
 
-- (void) takesPill {
+- (void)takesPill {
     NSLog(@"Patient %@ takes a pill", self.name);
 }
 
-- (void) makesShot {
+- (void)makesShot {
     NSLog(@"Patient %@ makes a shot", self.name);
 
 }
 
-- (void) goesToHospital {
+- (void)goesToHospital {
     NSLog(@"Patient %@ goes to hospital", self.name);
 
 }
 
-- (void) goesToSurgery {
+- (void)goesToSurgery {
     NSLog(@"Patient %@ goes to surgery", self.name);
 
 }

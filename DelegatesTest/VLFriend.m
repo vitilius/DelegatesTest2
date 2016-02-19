@@ -13,8 +13,7 @@
 #pragma mark - VLPatientDelegate
 
 
-- (void) patientFeelsBad: (VLPatient *) patient {
-    
+- (void)patientFeelsBad:(VLPatient *)patient {
     int i = 0;
     
     if ([patient hasHeadAche]) {
