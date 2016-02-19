@@ -25,12 +25,12 @@
     VLFriend* friend1 = [[VLFriend alloc] init];
     VLFriend* friend2 = [[VLFriend alloc] init];
     
-    VLPatient* patient1 = [[VLPatient alloc] initWithName:@"Vasya" :36.9f :doctor];
-    VLPatient* patient2 = [[VLPatient alloc] initWithName:@"Oleg" :37.2f :doctor];
-    VLPatient* patient3 = [[VLPatient alloc] initWithName:@"Pasha" :38.1f :friend1];
-    VLPatient* patient4 = [[VLPatient alloc] initWithName:@"Igor" :38.9f :doctor];
-    VLPatient* patient5 = [[VLPatient alloc] initWithName:@"Dima" :39.4f :friend2];
-    VLPatient* patient6 = [[VLPatient alloc] initWithName:@"Kolya" :40.5f :doctor];
+    VLPatient* patient1 = [[VLPatient alloc] initWithName:@"Vasya" temperature:36.9f delegate:doctor];
+    VLPatient* patient2 = [[VLPatient alloc] initWithName:@"Oleg" temperature:37.2f delegate:doctor];
+    VLPatient* patient3 = [[VLPatient alloc] initWithName:@"Pasha" temperature:38.1f delegate:friend1];
+    VLPatient* patient4 = [[VLPatient alloc] initWithName:@"Igor" temperature:38.9f delegate:doctor];
+    VLPatient* patient5 = [[VLPatient alloc] initWithName:@"Dima" temperature:39.4f delegate:friend2];
+    VLPatient* patient6 = [[VLPatient alloc] initWithName:@"Kolya" temperature:40.5f delegate:doctor];
 
 
     

@@ -10,7 +10,7 @@
 
 @implementation VLPatient
 
-- (id)initWithName:(NSString *)name :(CGFloat)temperature :(id)delegate {
+- (id)initWithName:(NSString *)name temperature:(CGFloat)temperature delegate:(id)delegate {
    
     self = [super init];
     self.name = name;

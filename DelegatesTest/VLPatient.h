@@ -24,7 +24,7 @@
 - (void)makesShot;
 - (void)goesToHospital;
 - (void)goesToSurgery;
-- (id)initWithName:(NSString *)name :(CGFloat)temperature :(id)delegate;
+- (id)initWithName:(NSString *)name temperature:(CGFloat)temperature delegate:(id)delegate;
 
 
 @end
