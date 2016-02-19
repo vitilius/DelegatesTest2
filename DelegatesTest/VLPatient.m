@@ -13,10 +13,12 @@
 - (id)initWithName:(NSString *)name temperature:(CGFloat)temperature delegate:(id)delegate {
    
     self = [super init];
-    self.name = name;
-    self.temperature = temperature;
-    self.delegate = delegate;
-    
+    if (self) {
+        self.name = name;
+        self.temperature = temperature;
+        self.delegate = delegate;
+    }
+
     return self;
 }
 
