@@ -60,6 +60,7 @@
 		691808D91C773729002CD4BF /* VLDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDoctor.m; sourceTree = "<group>"; };
 		691808DB1C774B02002CD4BF /* VLFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLFriend.h; sourceTree = "<group>"; };
 		691808DC1C774B02002CD4BF /* VLFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLFriend.m; sourceTree = "<group>"; };
+		69FCB07C1C7B67DA008285D3 /* VLProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLProtocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +111,7 @@
 		691808A11C772E80002CD4BF /* DelegatesTest */ = {
 			isa = PBXGroup;
 			children = (
+				69FCB07C1C7B67DA008285D3 /* VLProtocols.h */,
 				691808DB1C774B02002CD4BF /* VLFriend.h */,
 				691808DC1C774B02002CD4BF /* VLFriend.m */,
 				691808D81C773729002CD4BF /* VLDoctor.h */,
@@ -519,6 +521,7 @@
 				691808CE1C772E81002CD4BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		691808CF1C772E81002CD4BF /* Build configuration list for PBXNativeTarget "DelegatesTestTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +530,7 @@
 				691808D11C772E81002CD4BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		691808D21C772E81002CD4BF /* Build configuration list for PBXNativeTarget "DelegatesTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +539,7 @@
 				691808D41C772E81002CD4BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

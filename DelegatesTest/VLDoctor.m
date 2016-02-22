@@ -12,7 +12,7 @@
 @implementation VLDoctor
 
 
-- (void) report {
+- (void)report {
     NSLog(@"Here's report for today:");
     if ([self.headAchePatients count] > 0) {
         NSLog(@"Patients with head ache - %ld; patients' names: %@", [self.headAchePatients count], [self.headAchePatients componentsJoinedByString:@", "]);
@@ -49,49 +49,44 @@
 
 - (void)patientFeelsBad:(VLPatient *)patient {
     
-    NSString* damagedBodyPart =[self hurtBodyPart];
+    NSString *damagedBodyPart = [self hurtBodyPart];
     
     NSLog(@"My name is %@. I have problems with %@!", patient.name, damagedBodyPart);
 
     if ([damagedBodyPart isEqualToString:@"head"]) {
-        
         NSLog(@"Patient %@ has a head ache. He should take pill and have a rest", patient.name);
         [patient takesPill];
         [self.headAchePatients addObject:patient.name];
     }
     
     if ([damagedBodyPart isEqualToString:@"stomach"]) {
-        
         NSLog(@"Patient %@ has a stomach ache. He shoud take pill and drink warm drinks", patient.name);
         [patient takesPill];
         [self.stomachAchePatients addObject:patient.name];
     }
     
     if ([damagedBodyPart isEqualToString:@"arm"]) {
-        
         NSLog(@"Patient %@ has an arm ache. He shoud visit surgean at hospital", patient.name);
         [patient goesToHospital];
         [self.armAchePatients addObject:patient.name];
     }
     
     if ([damagedBodyPart isEqualToString:@"leg"]) {
-        
         NSLog(@"Patient %@ has a leg ache. He shoud have a rest and drink energetic drinks", patient.name);
         [self.legAchePatients addObject:patient.name];
     }
     
     if ([damagedBodyPart isEqualToString:@"heart"]) {
-        
         NSLog(@"Patient %@ has a heart ache! He have to make a shot and go to hospital!", patient.name);
         [patient makesShot];
         [patient goesToHospital];
         [self.heartAchePatients addObject:patient.name];
     }
-    
+    patient.patientOpinion = arc4random()%2;
 }
 
 - (NSString *)hurtBodyPart {
-    int enumCounter = arc4random() % 5;
+    int enumCounter = arc4random()%5;
     return [self stringFromEnum:enumCounter];
 }
 

@@ -22,6 +22,8 @@
     // Override point for customization after application launch.
     
     VLDoctor* doctor = [[VLDoctor alloc] init];
+    VLDoctor* doctor2 = [[VLDoctor alloc] init];
+    
     
     VLPatient* patient1 = [[VLPatient alloc] initWithName:@"Vasya" temperature:36.9f delegate:doctor];
     VLPatient* patient2 = [[VLPatient alloc] initWithName:@"Oleg" temperature:37.2f delegate:doctor];
@@ -39,7 +41,22 @@
     
     [doctor report];
     
+    for (VLPatient *anyPatient in patients) {
+        
+        if (anyPatient.patientOpinion == YES) {
+            NSLog(@"Patient %@ is satisfied with his doctor!", anyPatient.name);
+            [anyPatient gotWorse];
+        }
+        if (!anyPatient.patientOpinion == YES) {
+            NSLog(@"Patient %@ is very upset with his doctor!", anyPatient.name);
+            NSLog(@"Patient %@ changes his doctor", anyPatient.name);
+            anyPatient.delegate = doctor2;
+            [anyPatient gotWorse];
+        }
+
+    }
     
+
     
     return YES;
 }

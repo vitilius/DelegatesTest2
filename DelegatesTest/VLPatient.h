@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) CGFloat temperature;
 @property (weak, nonatomic) id <VLPatientDelegate> delegate;
+@property (assign, nonatomic) BOOL patientOpinion;
 
 - (BOOL)gotWorse;
 - (BOOL)hasHeadAche;
