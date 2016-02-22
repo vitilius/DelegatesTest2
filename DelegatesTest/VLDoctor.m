@@ -15,11 +15,11 @@
 
 - (void) report {
     NSLog(@"Here's report for today:");
-    NSLog(@"Patients with headache - %ld; patients' names: %@", [self.headAchePatients count], _headAchePatients);
-    NSLog(@"Patients with stomach ache - %ld; patients' names: %@", [self.stomachAchePatients count], _stomachAchePatients);
-    NSLog(@"Patients with armache - %ld; patients' names: %@", [self.armAchePatients count], _armAchePatients);
-    NSLog(@"Patients with legache - %ld; patients' names: %@", [self.legAchePatients count], _legAchePatients);
-    NSLog(@"Patients with heartache - %ld; patients' names: %@", [self.heartAchePatients count], _heartAchePatients);
+    NSLog(@"Patients with headache - %ld; patients' names: %@", [self.headAchePatients count], self.headAchePatients);
+    NSLog(@"Patients with stomach ache - %ld; patients' names: %@", [self.stomachAchePatients count], self.stomachAchePatients);
+    NSLog(@"Patients with armache - %ld; patients' names: %@", [self.armAchePatients count], self.armAchePatients);
+    NSLog(@"Patients with legache - %ld; patients' names: %@", [self.legAchePatients count], self.legAchePatients);
+    NSLog(@"Patients with heartache - %ld; patients' names: %@", [self.heartAchePatients count], self.heartAchePatients);
 
     
 
