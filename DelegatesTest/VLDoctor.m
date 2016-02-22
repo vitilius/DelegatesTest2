@@ -11,19 +11,32 @@
 
 @implementation VLDoctor
 
-#pragma mark - VLPatientDelegate
 
 - (void) report {
     NSLog(@"Here's report for today:");
-    NSLog(@"Patients with headache - %ld; patients' names: %@", [self.headAchePatients count], self.headAchePatients);
-    NSLog(@"Patients with stomach ache - %ld; patients' names: %@", [self.stomachAchePatients count], self.stomachAchePatients);
-    NSLog(@"Patients with armache - %ld; patients' names: %@", [self.armAchePatients count], self.armAchePatients);
-    NSLog(@"Patients with legache - %ld; patients' names: %@", [self.legAchePatients count], self.legAchePatients);
-    NSLog(@"Patients with heartache - %ld; patients' names: %@", [self.heartAchePatients count], self.heartAchePatients);
-
+    NSLog(@"Patients with head ache - %ld; patients' names: %@", [self.headAchePatients count], [self.headAchePatients componentsJoinedByString:@", "]);
+    NSLog(@"Patients with stomach ache - %ld; patients' names: %@", [self.stomachAchePatients count], [self.stomachAchePatients componentsJoinedByString:@", "]);
+    NSLog(@"Patients with arm ache - %ld; patients' names: %@", [self.armAchePatients count], [self.armAchePatients componentsJoinedByString:@", "]);
+    NSLog(@"Patients with leg ache - %ld; patients' names: %@", [self.legAchePatients count], [self.legAchePatients componentsJoinedByString:@", "]);
+    NSLog(@"Patients with heart ache - %ld; patients' names: %@", [self.heartAchePatients count], [self.heartAchePatients componentsJoinedByString:@", "]);
     
-
 }
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _headAchePatients = [[NSMutableArray alloc] init];
+        _stomachAchePatients = [[NSMutableArray alloc] init];
+        _armAchePatients = [[NSMutableArray alloc] init];
+        _legAchePatients = [[NSMutableArray alloc] init];
+        _heartAchePatients = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+#pragma mark - VLPatientDelegate
+
 
 - (void)patientFeelsBad:(VLPatient *)patient {
     
@@ -33,7 +46,7 @@
 
     if ([damagedBodyPart isEqualToString:@"head"]) {
         
-        NSLog(@"Patient %@ has a headache. He should take pill and have a rest", patient.name);
+        NSLog(@"Patient %@ has a head ache. He should take pill and have a rest", patient.name);
         [patient takesPill];
         [self.headAchePatients addObject:patient.name];
     }
