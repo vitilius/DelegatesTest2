@@ -14,13 +14,22 @@
 
 - (void) report {
     NSLog(@"Here's report for today:");
-    NSLog(@"Patients with head ache - %ld; patients' names: %@", [self.headAchePatients count], [self.headAchePatients componentsJoinedByString:@", "]);
-    NSLog(@"Patients with stomach ache - %ld; patients' names: %@", [self.stomachAchePatients count], [self.stomachAchePatients componentsJoinedByString:@", "]);
-    NSLog(@"Patients with arm ache - %ld; patients' names: %@", [self.armAchePatients count], [self.armAchePatients componentsJoinedByString:@", "]);
-    NSLog(@"Patients with leg ache - %ld; patients' names: %@", [self.legAchePatients count], [self.legAchePatients componentsJoinedByString:@", "]);
-    NSLog(@"Patients with heart ache - %ld; patients' names: %@", [self.heartAchePatients count], [self.heartAchePatients componentsJoinedByString:@", "]);
-    
-}
+    if ([self.headAchePatients count] > 0) {
+        NSLog(@"Patients with head ache - %ld; patients' names: %@", [self.headAchePatients count], [self.headAchePatients componentsJoinedByString:@", "]);
+    }
+    if ([self.stomachAchePatients count] > 0) {
+        NSLog(@"Patients with stomach ache - %ld; patients' names: %@", [self.stomachAchePatients count], [self.stomachAchePatients componentsJoinedByString:@", "]);
+    }
+    if ([self.armAchePatients count] > 0) {
+         NSLog(@"Patients with arm ache - %ld; patients' names: %@", [self.armAchePatients count], [self.armAchePatients componentsJoinedByString:@", "]);
+    }
+    if ([self.legAchePatients count] > 0) {
+         NSLog(@"Patients with leg ache - %ld; patients' names: %@", [self.legAchePatients count], [self.legAchePatients componentsJoinedByString:@", "]);
+    }
+    if ([self.heartAchePatients count] > 0) {
+        NSLog(@"Patients with heart ache - %ld; patients' names: %@", [self.heartAchePatients count], [self.heartAchePatients componentsJoinedByString:@" "]);
+    }
+   }
 
 - (instancetype)init
 {
