@@ -22,14 +22,12 @@
     // Override point for customization after application launch.
     
     VLDoctor* doctor = [[VLDoctor alloc] init];
-    VLFriend* friend1 = [[VLFriend alloc] init];
-    VLFriend* friend2 = [[VLFriend alloc] init];
     
     VLPatient* patient1 = [[VLPatient alloc] initWithName:@"Vasya" temperature:36.9f delegate:doctor];
     VLPatient* patient2 = [[VLPatient alloc] initWithName:@"Oleg" temperature:37.2f delegate:doctor];
-    VLPatient* patient3 = [[VLPatient alloc] initWithName:@"Pasha" temperature:38.1f delegate:friend1];
+    VLPatient* patient3 = [[VLPatient alloc] initWithName:@"Pasha" temperature:38.1f delegate:doctor];
     VLPatient* patient4 = [[VLPatient alloc] initWithName:@"Igor" temperature:38.9f delegate:doctor];
-    VLPatient* patient5 = [[VLPatient alloc] initWithName:@"Dima" temperature:39.4f delegate:friend2];
+    VLPatient* patient5 = [[VLPatient alloc] initWithName:@"Dima" temperature:39.4f delegate:doctor];
     VLPatient* patient6 = [[VLPatient alloc] initWithName:@"Kolya" temperature:40.5f delegate:doctor];
 
 

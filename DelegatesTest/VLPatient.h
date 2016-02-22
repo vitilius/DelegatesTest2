@@ -31,8 +31,18 @@
 
 @protocol VLPatientDelegate
 
+typedef enum {
+    VLHead,
+    VLArm,
+    VLHeart,
+    VLStomach,
+    VLLeg
+    
+} VLBodyPart;
+
+
 @required
 
 - (void)patientFeelsBad:(VLPatient *)patient;
-
+- (NSString*)hurtBodyPart;
 @end

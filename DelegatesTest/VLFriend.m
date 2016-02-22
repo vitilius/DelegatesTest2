@@ -8,10 +8,13 @@
 
 #import "VLFriend.h"
 
-@implementation VLFriend
+@implementation VLFriend 
 
 #pragma mark - VLPatientDelegate
 
+- (NSString*)hurtBodyPart {
+    return @"I can't understand what you're saying";
+}
 
 - (void)patientFeelsBad:(VLPatient *)patient {
     int i = 0;
