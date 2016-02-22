@@ -44,5 +44,5 @@ typedef enum {
 @required
 
 - (void)patientFeelsBad:(VLPatient *)patient;
-- (NSString*)hurtBodyPart;
+- (NSString *)hurtBodyPart;
 @end

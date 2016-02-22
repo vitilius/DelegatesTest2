@@ -29,14 +29,17 @@
     VLPatient* patient4 = [[VLPatient alloc] initWithName:@"Igor" temperature:38.9f delegate:doctor];
     VLPatient* patient5 = [[VLPatient alloc] initWithName:@"Dima" temperature:39.4f delegate:doctor];
     VLPatient* patient6 = [[VLPatient alloc] initWithName:@"Kolya" temperature:40.5f delegate:doctor];
-
-
     
+
     NSArray* patients = @[patient1, patient2, patient3, patient4, patient5, patient6];
     
     for (VLPatient *patient in patients) {
         NSLog(@"%@ are you okay? %@", patient.name, ![patient gotWorse] ? @"YES" : @"NO");
     }
+    
+    [doctor report];
+    
+    
     
     return YES;
 }

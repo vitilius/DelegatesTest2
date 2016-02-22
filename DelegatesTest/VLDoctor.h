@@ -11,5 +11,12 @@
 
 @interface VLDoctor : NSObject <VLPatientDelegate>
 
+@property (strong, nonatomic) NSMutableArray *headAchePatients;
+@property (strong, nonatomic) NSMutableArray *legAchePatients;
+@property (strong, nonatomic) NSMutableArray *armAchePatients;
+@property (strong, nonatomic) NSMutableArray *heartAchePatients;
+@property (strong, nonatomic) NSMutableArray *stomachAchePatients;
+
+- (void) report;
 
 @end
